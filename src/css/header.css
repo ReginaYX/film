@@ -1,0 +1,162 @@
+#head{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255,255,255,.2);
+    clear: both;
+    position: fixed;
+    z-index: 1888;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.04);
+    transition: background 1.5s;
+    -moz-transition: background 1.5s;	/* Firefox 4 */
+    -webkit-transition: background 1.5s;	/* Safari 和 Chrome */
+    -o-transition: background 1.5s;	/* Opera */
+}
+#head.bgColor{
+    background: #fff;
+}
+.head_content{
+    clear: both;
+    /*width: 1200px;*/
+    margin: 0 100px;
+    margin-right: 120px;
+}
+.head_left{
+    /*width: 275px;*/
+    float: left;
+}
+.head_right{
+	vertical-align: middle;
+    height: 50px;
+    float: right;
+    line-height: 60px;
+    /* width: calc(100% - 350px); */
+}
+.head_right .company{
+	float: left;
+	margin-top: 13px;
+	vertical-align: middle;
+    display: inline-block;
+}
+
+.head_right .portrait{
+	float: right;
+	vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    width: 46px;
+    height: 150%;
+    margin-top: 6px;
+    -moz-border-radius: 26px;/* åœ†çš„åŠå¾„ä¸ºè¾¹é•¿çš„ä¸€åŠï¼Œå³26px */
+    -webkit-border-radius: 26px;
+    border-radius: 26px;
+}
+
+.head_right .portrait .profile{
+    width: 100%;height: 46px;position: relative;overflow: hidden;border-radius: 50%;
+}
+.profile img{
+    width: 120%;height: 120%;position: absolute;left: -10%;top: -10%;;
+}
+
+/*头像下拉菜单*/
+.portrait .head-menu{
+    position:absolute;
+    width: 220px;
+    height: 332px;
+    top: 45px;
+    right: 0;
+    box-shadow: 0 2px 3px 2px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0 2px 3px 2px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0 2px 3px 2px rgba(0,0,0,0.08);
+    z-index: 2147483647;
+    border-radius: 2px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.portrait .head-menu li{
+    width: 198px;
+    margin: 0 auto;
+}
+
+.portrait .head-menu .nickname{
+    height:66px;
+    background:rgba(237,149,21,0.9);
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    width: 220px;
+}
+
+.portrait .head-menu .nickname .headBox{
+    width:34px;
+    height:34px;
+    background:rgba(240,187,111,1);
+    border-radius:4px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.portrait .head-menu .nickname .headBox i{
+    font-size: 18px;
+    color: #fff;
+    width: 34px;
+    display: block;
+    line-height: 34px;
+}
+
+.portrait .head-menu .nickname .infoBox p{
+    font-size:14px;
+    line-height: 14px;
+    margin-bottom: 5px;
+    color:rgba(255,255,255,1);
+}
+
+.portrait .head-menu .nickname .infoBox p:last-child{
+    margin-bottom: 0;
+    font-size:12px;
+    line-height: 12px;
+    opacity:0.6;
+}
+
+.portrait .head-menu li.border{
+    border-bottom: 1px solid rgba(231,231,236,1);
+}
+
+.portrait .head-menu li a{
+    width:100%;
+    font-size:14px;
+    height: 36px;
+    color:rgba(80,79,79,1);
+    margin: 0 auto;
+    padding-left: 10px;
+    line-height: 36px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.portrait .head-menu li a .newNumBox{
+    width: 18px;
+    height: 18px;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 16px;
+}
+
+.portrait .head-menu li.logout{
+    width:220px;
+    height:50px;
+    background:rgba(0,0,0,0.04);
+    font-size:14px;
+    line-height: 50px;
+    padding-left: 20px;
+    color:rgba(80,79,79,1);
+    margin-top: 5px;
+}

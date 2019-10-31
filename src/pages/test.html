@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  *{
+    box-sizing: border-box;
+  }
+
+  p{
+    margin: 0;
+  }
+
+  .previewBoxTitle{
+    margin: 10px 0;
+    width: 100%;
+    font-size:20px;
+    color:rgba(0,0,0,1);
+  }
+
+  .previewContentBox{
+    border: 1px solid rgba(136,140,151,1);
+    border-width:1px 0;
+    padding: 0 1px 10px;
+    /*height: calc(100% - 76px);*/
+    /*overflow-y: scroll;*/
+    height: 100%;
+    width: 100%;
+  }
+
+  #flipBox>div:last-child .previewContentBox{
+    margin-top: 10px;
+    height: calc(100% - 44px);
+  }
+
+  .previewInfoBox{
+    width: 100%;
+    border:1px solid rgba(136,140,151,1);
+    border-radius:4px;
+    flex-shrink: 0;
+    margin-top: 8px;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .previewInfoBox.bigBox{
+    height: 118px;
+  }
+
+  .previewInfoBox .previewInfoTitle{
+    background:rgba(215,217,220,1);
+    font-size:12px;
+    padding-left: 10px;
+    line-height: 18px;
+    height:18px;
+    color:rgba(57,63,81,1);
+    border-bottom: 1px solid rgba(136,140,151,1);
+    /*border-width: 0 0 1px 0;*/
+  }
+
+  .previewInfoBox .previewInfoTitle.green{
+    background:rgba(124,212,185,0.6);
+  }
+
+  .previewInfoBox .previewInfoTitle.red{
+    background:rgba(251,121,138,0.6);
+  }
+
+  .previewInfoBox .previewInfoTitle.yellow{
+    background:rgba(245,229,194,0.6);
+  }
+
+  .previewInfoBox .previewInfoTitle.flex{
+    padding-right: 55px;
+    width: 100%;
+    height: 18px;
+    overflow:hidden
+  }
+
+  .previewInfoBox .previewInfoTitle.flex span{
+    font-size:12px;
+    line-height: 18px;
+    color:rgba(57,63,81,1);
+  }
+
+  .previewInfoBox .previewInfoTitle.flex .second{
+    margin-left: 20px;
+  }
+
+  .previewInfoBox .previewInfoTitle.flex p{
+    color: #000;
+    display: inline-block;
+    font-size:12px;
+    line-height: 18px;
+  }
+
+  .previewInfoBox.previewTime{
+    height: 55px;
+  }
+
+  .previewTimeBox{
+    /*display: flex;*/
+  }
+
+  .previewInfoBox .previewTimeBox .previewInfoTxt{
+    /*flex: 1;*/
+    border-bottom: none;
+    padding-left: 0;
+    /*flex-shrink: 0;*/
+    height: 36px;
+    border-right: 1px solid rgba(136,140,151,1);
+    float: left;
+    width: 25%;
+  }
+
+  .previewInfoBox .previewTimeBox .previewInfoTxt:last-of-type{
+    border-right: none;
+  }
+
+  .previewTimeBox .previewInfoTxt .previewTimeTitle{
+    border: 1px solid rgba(136,140,151,1);
+    border-width: 0 0 1px 0;
+    width: 100%;
+    height: 18px;
+    text-align: center;
+    color:rgba(97,101,116,1);
+    font-size:12px;
+    line-height: 18px;
+  }
+
+  .previewTimeBox .previewInfoTxt .previewTimeTitle span{
+    margin-left: 8px;
+    color:#000;
+    font-size:12px;
+    line-height: 18px;
+  }
+
+  .previewTimeBox .previewTimeInfo{
+    height: 18px;
+    width: 100%;
+  }
+
+  .previewInfoBox.previewTime .previewTimeInfo p:first-of-type{
+    width: 24%;
+    margin-left: 0;
+    padding-left: 4px;
+    text-align: center;
+  }
+
+  .previewInfoBox.previewTime .previewTimeInfo p.border{
+    border:1px solid rgba(136,140,151,0.4);
+    border-width: 0 0 0 1px;
+    margin-left: 0;
+  }
+
+  .previewInfoBox.tableBox{
+    width: 100%;
+    height: auto;
+  }
+
+  .previewInfoBox.small{
+    height: 64px;
+  }
+
+  .previewInfoBox .previewInfoTxt{
+    font-size:12px;
+    padding-left: 10px;
+    line-height: 18px;
+    height:18px;
+    color:rgba(0,0,0,1);
+    border: 1px solid rgba(136,140,151,1);
+    border-width: 0 0 1px 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+
+  .previewInfoBox .previewInfoTxt:last-child{
+    border-bottom: none;
+  }
+
+  .previewInfoBox .previewInfoTxt.big{
+    height: 42px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .previewInfoBox .previewInfoTxt.big2{
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .previewInfoBox .previewInfoTxt.previewInfoTxtFlex{
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*float: left;*/
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .previewInfoBox .previewInfoTxtFlex>.previewInfoTxt:first-child{
+    padding-left: 0;
+    width: 50%;
+  }
+
+  .previewInfoBox .previewInfoTxt.txtBorder{
+    display: inline-block;
+    border-left: 1px solid rgba(136,140,151,1);
+    padding-left: 15px;
+  }
+
+  .previewInfoBox .contactTxt{
+    font-size:12px;
+    padding: 0 10px;
+    line-height: 18px;
+    height:18px;
+    color:rgba(0,0,0,1);
+    display: inline-block;
+  }
+
+  .previewInfoBox .previewInfoTxt span{
+    color: #616574;
+    font-size:12px;
+  }
+
+  .previewInfoBox .previewInfoTxt.big span.big{
+    color: #000;
+    font-size:20px;
+  }
+
+  .previewInfoBox .previewInfoTxt.big2 span.big{
+    color: #000;
+    font-size:16px;
+  }
+
+  .previewInfoBox .previewInfoTxt.previewInfoTxtBox span{
+    margin-left: 40px;
+  }
+
+  .previewInfoBox .previewInfoTxt.previewInfoTxtBox span:first-of-type{
+    margin-left: 0;
+  }
+
+  .previewInfoBox .previewInfoTxt p{
+    display: inline-block;
+    margin-left: 40px;
+    color:rgba(57,63,81,1);
+    font-size:12px;
+  }
+
+  .previewInfoBox .previewInfoTxt p.border{
+    border-left: 1px solid rgba(136,140,151,1);
+    padding-left: 15px;
+  }
+
+  .previewInfoBox .previewInfoTxt.previewInfoTxtFlex p{
+    margin-left: 0;
+    margin-right: 20px;
+    display: block;
+    float: left;
+  }
+
+  .previewTable{
+    width: 100%;
+  }
+
+  .previewThead th{
+    padding: 0;
+    height: 20px;
+    border: 1px solid rgba(136,140,151,1);
+    border-width: 0 1px 1px 0;
+    background:rgba(97,101,116,0.1);
+    font-size:12px;
+    color:rgba(97,101,116,1);
+    font-weight: normal;
+    line-height: 18px;
+    vertical-align: top;
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .previewThead th:last-of-type{
+    border-right: none;
+  }
+
+  .previewTr th{
+    /*border-color: rgba(136,140,151,1);*/
+    padding: 0;
+    vertical-align: top;
+    border: 1px solid rgba(136,140,151,1);
+    border-width: 0 1px 1px 0;
+    padding: 0 10px;
+    font-size:12px;
+    color:rgba(0,0,0,1);
+    line-height: 18px;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  .previewTr:last-child th{
+    border-bottom: none;
+  }
+
+  .previewTr th:last-child{
+    border-right: none;
+  }
+
+  .previewTr th.center,
+  .previewThead th.center{
+    text-align: center;
+  }
+</style>
+<body>
+  <div id="flipBox">
+    <div id="noticeSide1">
+      <div class="previewBoxTitle">拍摄通知单 &#12288;&#12288;《是是是》</div>
+      <div class="previewContentBox">
+        <div class="previewInfoBox bigBox">
+          <div class="previewInfoTitle green">拍摄场地信息</div>
+          <div class="previewInfoTxt big"><span class="big">拍摄地：</span>是是是</div>
+          <div class="previewInfoTxt">
+            <span>拍摄日期：</span>水水水水
+            <p>是是是</p><p>拍摄第232天</p>
+          </div>
+          <div class="previewInfoTxt previewInfoTxtBox">
+            <span>天气：</span>暂无当天天气信息
+            <span>日出时间：</span>暂无
+            <span>日落时间：</span>暂无
+          </div>
+          <div class="previewInfoTxt big2"><span class="big">备注：</span>的地方个人</div>
+        </div>
+        <div class="previewInfoBox previewTime">
+          <div class="previewInfoTitle green flex">
+            <span class="first">拍摄时间</span>
+            <span class="second">起始时间：<p>付过费~范海弗滕</p></span>
+          </div>
+          <div class="previewTimeBox">
+            <div class="previewInfoTxt float">
+              <div class="previewTimeTitle">早餐<span>1020</span></div>
+              <div class="previewTimeInfo">
+                <p>0人</p>
+                <p class="border">剧组用餐</p>
+              </div>
+            </div>
+            <div class="previewInfoTxt">
+              <div class="previewTimeTitle">午餐<span>1020</span></div>
+              <div class="previewTimeInfo">
+                <p>0人</p>
+                <p class="border">剧组用餐</p>
+              </div>
+            </div>
+            <div class="previewInfoTxt">
+              <div class="previewTimeTitle">晚餐<span>1020</span></div>
+              <div class="previewTimeInfo">
+                <p>0人</p>
+                <p class="border">剧组用餐</p>
+              </div>
+            </div>
+            <div class="previewInfoTxt">
+              <div class="previewTimeTitle">夜宵<span>1020</span></div>
+              <div class="previewTimeInfo">
+                <p>0人</p>
+                <p class="border">剧组用餐</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="previewInfoBox">
+          <div class="previewInfoTitle green">出发时间</div>
+          <table cellspacing="0" class="previewTable">
+            <tr class="previewThead">
+              <th>部门</th>
+              <th class="center">出发时间</th>
+              <th>出发地点</th>
+              <th>备注</th>
+            </tr>
+            <tr class="previewTr">
+            </tr>
+          </table>
+        </div>
+        <div class="previewInfoBox tableBox">
+          <div class="previewInfoTitle previewInfoTxt red" v-else><span>拍摄地：</span>暂无拍摄地</div>
+          <table cellspacing="0" class="previewTable">
+            <tr class="previewThead">
+              <th class="center">场次</th>
+              <th width="8%">场景</th>
+              <th class="center">气氛</th>
+              <th class="center">页面量</th>
+              <th>内容</th>
+              <th>角色</th>
+              <th>道具</th>
+              <th>备注</th>
+            </tr>
+            <tr class="previewTr">
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="noticeSide2">
+      <div class="previewContentBox">
+        <div class="previewInfoBox">
+          <div class="previewInfoTitle yellow">演员化妆时间</div>
+          <table cellspacing="0" class="previewTable">
+            <tr class="previewThead">
+              <th>角色</th>
+              <th>演员</th>
+              <th class="center">是否现场化妆</th>
+              <th class="center">化妆时间</th>
+              <th class="center">出发时间</th>
+            </tr>
+            <tr class="previewTr">
+            </tr>
+          </table>
+        </div>
+        <div class="previewInfoBox">
+          <div class="previewInfoTitle">联络咨询</div>
+          <div class="previewInfoTxt previewInfoTxtFlex">
+            <p>暂无联络咨询</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

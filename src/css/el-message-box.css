@@ -1,0 +1,107 @@
+.el-message-box{
+    width: 500px!important;
+    height: auto;
+    padding-bottom: 0!important;
+    box-sizing: border-box;
+    border-radius: 5px!important;
+}
+.el-message-box__header{
+    padding: 20px 40px!important;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+.el-message-box__headerbtn{
+    top: 22px!important;
+    right: 36px!important;
+}
+.el-message-box__content{
+    padding: 0 50px!important;
+    box-sizing: border-box;
+    text-align: center;
+}
+.el-message-box__status.el-icon-warning{
+    color: #f6ae45!important;
+    font-size: 32px!important;
+}
+.el-message-box span{
+    font-size: 14px;
+    color: rgba(0,0,0,.8);
+    font-family: Microsoft Yahei, 微软雅黑;
+}
+.el-message-box__status+.el-message-box__message{
+    padding: 0px!important;
+    width: 400px;
+    box-sizing: border-box;
+}
+.el-message-box__headerbtn .el-message-box__close{
+    color: #c9c9c9!important;
+    font-size: 20px!important;
+}
+.el-message-box__headerbtn .el-message-box__close:hover{
+    color: #fd4444!important;
+}
+.el-message-box p{
+    font-size: 14px;
+    font-family: Microsoft Yahei, 微软雅黑;
+    color: #333;
+}
+.el-message-box__btns{
+    text-align: center!important;
+    margin: 45px 0 30px;
+    width: 500px;
+    padding: 0!important;
+}
+.el-message-box__btns button{
+    width: 100px;
+    height: 34px;
+    border: 1px solid #ddd!important;
+    border-radius: 5px;
+    background: none;
+}
+.el-message-box__btns button:hover{
+    border-color: #ED9515!important;
+    background: none!important;
+}
+.el-message-box__btns button span{
+    color: #999;
+}
+
+.el-message-box__btns button:nth-child(2),
+.el-message-box__btns button.aloneConfirmButton,
+.el-message-box__btns button.aloneConfirmButton:hover{
+    background: #ED9515!important;
+    border-color: #ED9515!important;
+    box-sizing: border-box;
+    margin-left: 80px!important;
+}
+
+.el-message-box__btns button.aloneConfirmButton,
+.el-message-box__btns button.aloneConfirmButton:hover{
+    margin-left: 0!important;
+}
+
+.el-message-box__btns button:nth-child(2) span,
+.el-message-box__btns button.aloneConfirmButton span,
+.el-message-box__btns button.aloneConfirmButton:hover span{
+    color: #fff;
+}
+.el-button--small span{
+    font-size: 14px;
+}
+.el-message-box__btns button.reverseCancel{
+    background: #ED9515!important;
+    border-color: #ED9515!important;
+}
+.el-message-box__btns button.reverseCancel span{
+    color: #fff;
+}
+.el-message-box__btns button.reverseConfirm{
+    border: 1px solid #ddd!important;
+    background: none!important;
+}
+.el-message-box__btns button.reverseConfirm:hover{
+    border-color: #ED9515!important;
+}
+.el-message-box__btns button.reverseConfirm span{
+    color: #999;
+}

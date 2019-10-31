@@ -1,0 +1,456 @@
+.form{
+  font-size:12px;
+  color:rgba(97,101,116,1);
+  flex-shrink: 0;
+  margin:0 0 20px 0;
+}
+
+.form .formSign{
+  color: #F05050;
+  margin-left: 4px;
+}
+
+.el-input__inner,
+.el-input--prefix .el-input__inner,
+.vxe-table .vxe-input--wrapper .vxe-input{
+  height: 32px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(210,210,210,0.6);
+  font-size:12px;
+  color:rgba(57,63,81,1);
+  background: none;
+    transition: all 0.8s
+}
+
+.el-input__inner{
+  padding-left: 0;
+  background-color: transparent!important;
+}
+
+.el-textarea__inner{
+    padding: 5px 10px;
+}
+
+.margin .el-form-item__content{
+    line-height: 30px;
+}
+
+.margin .el-input{
+    height:30px;
+    line-height: 30px;
+}
+
+.margin .el-input__inner{
+    height:30px;
+    border:1px solid rgba(210,210,210,0.6);
+    border-radius:2px;
+    padding-left: 10px;
+}
+
+.el-input__inner:focus,
+.vxe-table .vxe-input--wrapper .vxe-input:focus{
+  border-color: rgba(255,105,14,0.6);
+}
+
+.el-input__prefix i{
+  line-height: 32px;
+  transition: color 1s;
+}
+
+.el-input__suffix i{
+  line-height: 32px;
+}
+
+.el-input__suffix{
+  top: 10px;
+}
+
+.el-input__prefix i.active{
+  color: #EE7373;
+}
+
+.el-input.el-input--suffix>.el-input__suffix{
+  top: 0px;
+}
+
+.el-date-editor.el-input.el-input--suffix>.el-input__suffix{
+  top: 10px;
+}
+
+.el-input.is-disabled .el-input__inner{
+  background-color: transparent;
+}
+
+/*周期选择器*/
+.el-input__icon{
+  transition: color 1s;
+  line-height: 32px;
+}
+
+.el-range__icon{
+  color: #EE7373;
+}
+
+.el-range-input,
+.el-range-separator{
+  font-size: 12px;
+  color:rgba(57,63,81,1);
+  line-height: 32px;
+}
+
+.el-range-input{
+  padding-top: 5.5px;
+}
+
+/*日期选择器*/
+.el-date-editor.el-input {
+  display: block;
+  width: 100%;
+}
+
+.el-date-editor .iconriqi1{
+  transition: color 1s;
+  line-height: 42px;
+}
+
+.el-date-editor .el-input__suffix .el-input__icon{
+  line-height: 38px;
+}
+
+.el-date-editor.active .el-range__icon,
+.el-date-editor.active .el-input__prefix{
+  color: #EE7373;
+}
+
+.el-date-editor .el-range-input,
+.el-date-editor .el-range-separator{
+  font-size: 12px;
+  color:rgba(57,63,81,1);
+  line-height: 32px;
+}
+
+/*时间选择器*/
+.el-date-editor.el-date-editor--time{
+  width: 100%;
+}
+
+.el-date-editor.el-date-editor--time .el-input__prefix{
+    right: 0;
+  left: initial;
+}
+
+.el-date-editor.el-date-editor--time .el-input__inner{
+  padding: 0;
+
+}
+
+.el-range-editor.is-disabled,
+.el-range-editor.is-disabled input{
+  background-color: transparent;
+}
+
+
+/*下拉单选*/
+.el-dialog .el-dialog__body .el-form.addFormBox .el-select .el-input__suffix{
+  height: 32px;
+  top: 3px;
+}
+
+/*复合输入框*/
+ .el-input-group .el-input__inner{
+  height: 24px;
+  padding: 0 12px;
+  border-radius:12px 0 0 12px;
+  width: 100%;
+  font-size:12px;
+   border: 1px solid rgba(210,210,210,0.6);
+  border-right: none;
+}
+
+ .el-input-group .el-input-group__append{
+  border-radius:0 12px 12px 0;
+  width: 20%;
+  padding: 0;
+  height: 24px;
+  background:rgba(237,149,21,1);
+  border: none;
+}
+
+ .el-input-group .el-button{
+  width: 96%;
+  padding: 0;
+  height: 22px;
+  margin: 0;
+}
+
+ .el-input-group .el-button i{
+  font-size: 14px;
+  color: #fff;
+}
+
+ /*复合文字输入框*/
+.inputWithBtn .el-input__inner{
+    height: 34px;
+    width: 100%;
+    border-color:rgba(186,186,186,1);
+    padding: 0 10px;
+    font-size:14px;
+    color:rgba(29,24,25,0.5);
+    border-radius:2px 0px 0px 2px;
+    border-right: none;
+}
+
+.inputWithBtn .el-input-group__append{
+    padding: 0;
+    width: 25%;
+    text-align: center;
+    background:rgba(108,111,191,1);
+    border-radius:0px 2px 2px 0px;
+    border-color: rgba(108,111,191,1);
+    cursor: pointer;
+}
+
+.inputWithBtn .el-input-group__append .inputBtn{
+    font-size:12px;
+    color:rgba(255,255,255,1);
+}
+
+ /*表单*/
+.el-form{
+  padding: 0 40px;
+}
+
+.el-form .el-form-item__label{
+  font-size:12px;
+  line-height: 12px;
+  color:rgba(102,102,102,1);
+  margin-bottom: 2px;
+}
+
+.el-form .margin .el-form-item__label{
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: left;
+}
+
+.el-form .el-form-item{
+  margin-bottom: 30px;
+}
+
+.el-form .formFlex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.el-form .formFlex .el-form-item:first-child{
+  width: 30%;
+  transition: width 0.5s;
+}
+
+.el-form .formFlex .el-form-item:nth-child(2){
+  width: 64%;
+}
+
+.el-form .formFlex.averageForm .el-form-item:first-child,
+.el-form .formFlex.averageForm .el-form-item:nth-child(2){
+    width: 45%;
+}
+
+.el-form .formFlex.formFlexRd>.el-form-item{
+    width: 30%;
+}
+
+.el-form .formFlex.formFlexTh>.el-form-item{
+    width: 23%;
+}
+
+.el-form .formFlexNoLabel{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.el-form .formFlexNoLabel>.el-form-item:nth-child(2) .el-form-item__content{
+    margin-top: 14px;
+}
+
+.el-form .el-form-item.onlyForm .el-form-item__label{
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.el-form .el-form-item.onlyForm .el-form-item__content{
+  margin-bottom: 60px;
+}
+
+.el-form .el-form-item.onlyForm.notOnly .el-form-item__content{
+  margin-bottom: 0px;
+}
+
+.el-form .el-form-item.onlyForm .el-form-item__content .el-select{
+  width: 100%;
+}
+
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus{
+  border-color: rgba(210,210,210,0.6);
+}
+
+.el-form .el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before,
+.el-form .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap > .el-form-item__label:before{
+  display: none;
+}
+
+.el-form .el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:after,
+.el-form .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap > .el-form-item__label:after{
+  content: '*';
+  color: rgba(234,80,80,1);
+  margin-left: 4px;
+}
+
+.el-form .el-form-item .el-input__prefix{
+  height: 32px;
+  top: 15px;
+}
+
+/*省市区选择器*/
+.area-cascader-wrap .area-select{
+  display: block;
+  margin-top: 16px;
+  border: none;
+  border-bottom: 1px solid rgba(210,210,210,0.6);
+  width: 100%;
+    border-radius: 0;
+}
+
+.area-cascader-wrap .area-select .area-selected-trigger{
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0;
+  font-weight: 500;
+  color: #c0c4cc;
+}
+
+.area-cascader-wrap.active .area-selected-trigger{
+  color:rgba(57,63,81,1);
+}
+
+/*图片上传*/
+.addDialog .photoUpload .el-upload{
+    width:110px;
+    height:90px;
+    background:rgba(245,245,247,1);
+    border:1px solid rgba(217,216,225,1);
+    border-radius:4px;
+    line-height: 90px;
+}
+
+.addDialog .photoUpload.hide .el-upload{
+    display: none;
+}
+
+.addDialog .photoUpload .el-upload-list li{
+    width:110px;
+    height:90px;
+    border-radius:4px;
+    line-height: 90px;
+    border: none;
+}
+
+.addDialog .photoUpload .el-upload-list--picture-card .el-upload-list__item-thumbnail{
+    vertical-align: top;
+}
+
+/*支付方式单选框*/
+.payMethodBox .payMethodTitleBox{
+    margin: 20px 0;
+}
+
+.payMethodBox .payMethodTitleBox .payMethodTitle{
+    font-size:14px;
+    color:rgba(57,63,81,1);
+    line-height: 14px;
+}
+
+.payMethodBox .payMethodRadio{
+    display: flex;
+}
+
+.payMethodBox .payMethodItem{
+    width:150px;
+    height:54px;
+    background:rgba(255,255,255,0.3);
+    border:1px solid rgba(57,63,81,0.3);
+    border-radius:4px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.payMethodBox .payMethodItem.is-checked{
+    background:rgba(253,244,231,1);
+    border-color: rgba(237,149,21,1);
+}
+
+.payMethodBox .el-radio__input{
+    display: none;
+}
+
+.payMethodBox .el-radio__label{
+    font-size:14px;
+    color:rgba(57,63,81,1);
+    font-family: Microsoft Yahei, 微软雅黑;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.payMethodBox .el-radio__label i{
+    font-size: 32px;
+    color: #1AB45E;
+    margin-right: 12px;
+}
+
+.payMethodBox .el-radio:last-child .el-radio__label i{
+    color: #1296DB;
+}
+
+.payRight.el-dialog__wrapper .el-dialog .el-dialog__body{
+    padding: 20px 0;
+}
+
+.payRight .QRCode{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+.payRight .alipayQRcode{
+    width: 116px;
+    height: 105px;
+    display: block;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: none;
+}
+
+.payRight .alipayQRcode .qrPayImg{
+    width: 200px;
+    height: 200px;
+}
+
+.payRight .payDesc{
+    font-size: 14px;
+    width: 308px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}

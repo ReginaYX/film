@@ -1,0 +1,19 @@
+#head_right ul li ul li a:hover{background-color: #f9f9f9;}
+#haed{height: 60px;background-color: #fff;border-bottom: 1px solid #ddd;}
+/*#head_content{width: 1200px;margin:0 auto;}*/
+.yonghuzhidao{width: 1040px;margin:0 auto 118px;margin-top: -50px;}
+#yonghuzhidao h3,#yonghuzhidao span{
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: #333;
+	font-weight: 300;
+}
+#yonghuzhidao p,#yonghuzhidao ol li{
+	color: #666;
+	font-family: 新宋体;
+	font-size: 16px;
+	line-height: 30px;
+}
+/*#yonghuzhidao p{margin-top: -16px;}*/
+#yonghuzhidao h3{margin-top: 40px;}
+/*#yonghuzhidao ol{margin-top: -18px;}*/
